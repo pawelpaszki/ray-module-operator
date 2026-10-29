@@ -305,6 +305,7 @@ func main() {
 		ctx = registerTLSProfileWatcher(ctx, mgr, tlsLoad)
 	}
 
+	setupLog.Info("RHOAIENG-102059 verification build", "buildId", "RHOAIENG-102059-verify")
 	setupLog.Info("Starting manager")
 	if err := mgr.Start(ctx); err != nil {
 		setupLog.Error(err, "Failed to run manager")
